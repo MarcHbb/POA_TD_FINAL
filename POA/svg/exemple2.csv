@@ -1,0 +1,12 @@
+Rectangle;2;6;6;288;188;255;255;255;2
+Cercle;3;150;100;60;190;0;38;3
+Texte;1;150;220;Japon;0;0;0;4
+Rectangle;4;0;0;300;200;200;200;200;1
+Translation;1;200;10
+Translation;2;200;10
+Translation;3;200;10
+Translation;4;230;10
+Rotation;4;90;730;10
+Chemin;5;M45,30L0,0v60z;17;69;126;7
+Chemin;6;M0,0h90v60h-90z;215;20;26;5
+Chemin;7;M0,0h90v30h-90z;255;255;255;6
