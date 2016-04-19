@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace POA_GRA_GASNIER_HABIB
 {
-    class PathCSV
+    class PathCSV : DrawCSV
     {
-        private int idElement;
         private string[] path; 
-        private double valueRed;
-        private double valueGreen;
-        private double valueBlue;
-        private int ranking;
+
+        public PathCSV (string[] Path, int IdElement, double ValueRed, double ValueGreen,double ValueBlue, int Ranking)
+            : base(IdElement, ValueRed, ValueGreen, ValueBlue, Ranking)
+        {
+            this.path = Path;
+        }
     }
 }

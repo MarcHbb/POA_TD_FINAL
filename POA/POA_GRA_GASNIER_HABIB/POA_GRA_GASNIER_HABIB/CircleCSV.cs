@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace POA_GRA_GASNIER_HABIB
 {
-    class CircleCSV
+    class CircleCSV : DrawCSV
     {
-        private int idElement;
-        private double cx;
-        private double cy;
+        private double coordX;
+        private double coordY;
         private double radius;
-        private double valueRed;
-        private double valueGreen;
-        private double valueBlue;
-        private int ordre;
+
+        public CircleCSV (double CoordX, double CoordY, double Radius, int IdElement, double ValueRed, double ValueGreen,
+            double ValueBlue, int Ranking) 
+            : base (IdElement, ValueRed, ValueGreen, ValueBlue, Ranking)
+        {
+            this.coordX = CoordX;
+            this.coordY = CoordY;
+            this.radius = Radius;
+
+        }
 
     }
 }

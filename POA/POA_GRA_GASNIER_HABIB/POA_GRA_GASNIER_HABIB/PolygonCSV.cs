@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace POA_GRA_GASNIER_HABIB
 {
-    class PolygonCSV
+    class PolygonCSV : DrawCSV
     {
-        private int idElement;
-        private int points;
-        private double valueRed;
-        private double valueGreen;
-        private double valueBlue;
-        private int ranking;
+        private double[] points;
 
+        public PolygonCSV (double[] points, int IdElement, double ValueRed, double ValueGreen, double ValueBlue, int Ranking)
+            : base(IdElement, ValueRed, ValueGreen, ValueBlue, Ranking)
+        {
+            this.points = points;
+        }
     }
 }

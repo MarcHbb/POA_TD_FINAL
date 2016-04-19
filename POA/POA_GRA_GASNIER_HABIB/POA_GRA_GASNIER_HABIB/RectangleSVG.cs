@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace POA_GRA_GASNIER_HABIB
 {
-    class RectangleSVG
+    class RectangleSVG : DrawSVG
     {
-        private int idElement;
-        private double x;
-        private double y;
-        private double height;
-        private double width;
-        private double[] style;
-        private int ranking;
+        private string x, y, height, width;
+       
+        public RectangleSVG (string X, string Y, string Height, string Width, string Style)
+            : base (Style)
+        {
+            this.x = X;
+            this.y = Y;
+            this.height = Height;
+            this.width = Width;
+        }
     }
 }

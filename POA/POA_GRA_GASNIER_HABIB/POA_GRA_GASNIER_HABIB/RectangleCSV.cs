@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace POA_GRA_GASNIER_HABIB
 {
-    class RectangleCSV
+    class RectangleCSV : DrawCSV
     {
-        private int idElement;
         private double x;
         private double y;
         private double height;
         private double width;
-        private double valueRed;
-        private double valueGreen;
-        private double valueBlue;
-        private int ranking;
 
+        public RectangleCSV (double X, double Y, double Height, double Width, int IdElement, double ValueRed, double ValueGreen,
+            double ValueBlue, int Ranking)
+            : base(IdElement, ValueRed, ValueGreen, ValueBlue, Ranking)
+        {
+            this.x = X;
+            this.y = Y;
+            this.height = Height;
+            this.width = Width;
+        }
     }
 }

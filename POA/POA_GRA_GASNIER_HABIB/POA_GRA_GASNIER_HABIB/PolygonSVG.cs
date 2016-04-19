@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace POA_GRA_GASNIER_HABIB
 {
-    class PolygonSVG
+    class PolygonSVG : DrawSVG
     {
-        private int idElement;
-        private int points;
-        private double[] style;
-        private int ranking;
+        private string points;
+
+        public PolygonSVG (string Points, string Style)
+            : base (Style)
+        {
+            this.points = Points;
+        }
     }
 }

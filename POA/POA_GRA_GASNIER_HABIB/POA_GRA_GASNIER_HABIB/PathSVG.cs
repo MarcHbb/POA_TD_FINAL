@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace POA_GRA_GASNIER_HABIB
 {
-    class PathSVG
+    class PathSVG : DrawSVG
     {
-        private int idElement;
-        private string[] path;
-        private double[] style;
-        private int ranking;
+        private string path;
+        
+        public PathSVG (string Path, string Style)
+            : base(Style)
+        {
+            this.path = Path;
+        }
     }
 }

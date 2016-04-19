@@ -8,5 +8,11 @@ namespace POA_GRA_GASNIER_HABIB
 {
     class DrawSVG
     {
+        private string style;
+
+        public DrawSVG (string Style)
+        {
+            this.style = Style;
+        }
     }
 }

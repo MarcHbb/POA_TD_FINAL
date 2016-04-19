@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace POA_GRA_GASNIER_HABIB
 {
-    class EllipseSVG
+    class EllipseSVG : DrawSVG
     {
-        private int idElement;
-        private double cx;
-        private double cy;
-        private double radiusX;
-        private double radiusY;
-        private double[] style;
-        private int ranking;
+        private string coordX, coordY, radiusX, radiusY;
+
+        public EllipseSVG (string CoordX, string CoordY, string RadiusX, string RadiusY, string Style)
+            : base(Style)
+        {
+            this.coordY = CoordX;
+            this.coordY = CoordY;
+            this.radiusX = RadiusX;
+            this.radiusY = RadiusY;
+        }
     }
 }

@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 
 namespace POA_GRA_GASNIER_HABIB
 {
-    class TextCSV
+    class TextCSV : DrawCSV
     {
-        private int idElement;
         private double x;
         private double y;
         private string contents;
-        private Transformation transformation;
-        private double valueRed;
-        private double valueGreen;
-        private double valueBlue;
-        private int ranking;
+
+        public TextCSV (double X, double Y, string Contents, int IdElement, double ValueRed, double ValueGreen,
+            double ValueBlue, int Ranking)
+            : base(IdElement, ValueRed, ValueGreen, ValueBlue, Ranking)
+        {
+            this.x = X;
+            this.y = Y;
+            this.contents = Contents;
+        }
+
     }
 }

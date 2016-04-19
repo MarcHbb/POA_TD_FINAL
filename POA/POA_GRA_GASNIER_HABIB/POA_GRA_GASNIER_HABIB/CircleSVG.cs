@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace POA_GRA_GASNIER_HABIB
 {
-    class CircleSVG
+    class CircleSVG : DrawSVG
     {
-        private int idElement;
-        private double cx;
-        private double cy;
-        private double radius;
-        private double[] style;
-        private int ranking;
+        private string coordX, coordY, radius;
+
+        public CircleSVG (string CoordX, string CoordY, string Radius, string Style)
+            : base (Style)
+        {
+            this.coordX = CoordX;
+            this.coordY = CoordY;
+            this.radius = Radius;
+        }
     }
 }
