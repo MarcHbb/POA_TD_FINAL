@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +38,87 @@ namespace POA_GRA_GASNIER_HABIB
 
         public int Ranking
         { get { return Ranking; } }
+
+
+
+        public void ReadCSV()
+        {
+            string line;
+
+            // Read the file and display it line by line.
+            StreamReader file = new StreamReader(@"C:\Users\Marc\Desktop\3eme année\S6\POA\svg\ExempleTout.csv");
+            List<String> list_str = new List<String>();
+            while ((line = file.ReadLine()) != null)
+            {
+                list_str.Add(line);
+            }
+
+            foreach (string obj in list_str)
+            {
+
+                char[] delimiterChars = { ';' };
+
+                string text = obj;
+
+                string[] words = text.Split(delimiterChars);
+
+                switch(words[0])
+                {
+                    case "Rectangle":
+                        Console.WriteLine("Rectangle");
+                        break;
+
+                    case "Cercle":
+                        Console.WriteLine("Cercle");
+                        break;
+
+                    case "Ellipse":
+                        Console.WriteLine("Ellipse");
+                        break;
+
+                    case "Polygone":
+                        Console.WriteLine("Polygone");
+                        break;
+
+                    case "Chemin":
+                        Console.WriteLine("Chemin");
+                        break;
+
+                    case "Texte":
+                        Console.WriteLine("Texte");
+                        break;
+
+                    case "Rotation":
+                        Console.WriteLine("Rotation");
+                        break;
+
+                    case "Translation":
+                        Console.WriteLine("Translation");
+                        break;
+
+                    default: Console.WriteLine("Error, failed to recognize caracter");
+                        break;
+                }
+
+          
+
+            }
+
+            Console.ReadKey();
+
+        }
+
+
+        
+         
+      
+
+        public void StoreData()
+        {
+            
+
+            
+        }
 
     }
 }
