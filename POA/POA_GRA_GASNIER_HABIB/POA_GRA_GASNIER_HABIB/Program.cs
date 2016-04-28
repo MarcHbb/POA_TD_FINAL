@@ -10,11 +10,23 @@ namespace POA_GRA_GASNIER_HABIB
     {
         static void Main(string[] args)
         {
-            DrawCSV npm1 = new DrawCSV(1, 255, 20, 155, 1);
+            List<String[]> npm = new List<String[]>();
+            DrawCSV npm1 = new DrawCSV(npm,@"C:\Users\Marc\Desktop\3eme année\S6\POA\svg\exemple4.csv");
             npm1.ReadCSV();
+            List<DrawCSV> liste = npm1.Convert_ListStr();
 
-            DrawSVG npm2 = new DrawSVG("djkdnf");
-            npm2.WriteSVG();
+            foreach (DrawCSV k in liste)
+            {
+                if (k is CircleCSV)
+                {
+                    Console.WriteLine("circle");
+                }
+            }
+
+
+            Console.ReadKey();
+
+            //DrawSVG npm2 = new DrawSVG("djkdnf");
         }
     }
 }

@@ -44,21 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CircleCSV.cs" />
-    <Compile Include="CircleSVG.cs" />
     <Compile Include="DrawCSV.cs" />
     <Compile Include="EllipseCSV.cs" />
-    <Compile Include="EllipseSVG.cs" />
     <Compile Include="PathCSV.cs" />
-    <Compile Include="PathSVG.cs" />
     <Compile Include="PolygonCSV.cs" />
-    <Compile Include="PolygonSVG.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RectangleCSV.cs" />
-    <Compile Include="RectangleSVG.cs" />
     <Compile Include="DrawSVG.cs" />
     <Compile Include="TextCSV.cs" />
-    <Compile Include="TextSVG.cs" />
     <Compile Include="Transformation.cs" />
   </ItemGroup>
   <ItemGroup>

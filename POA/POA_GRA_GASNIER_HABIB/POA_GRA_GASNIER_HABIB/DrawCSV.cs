@@ -9,45 +9,26 @@ namespace POA_GRA_GASNIER_HABIB
 {
     class DrawCSV
     {
-        private int idElement;
-        private double valueRed;
-        private double valueGreen;
-        private double valueBlue;
-        private int ranking;
+        public List<String[]> list_value;
+        private string path_Id;
 
-        public DrawCSV(int IdElement, double ValueRed, double ValueGreen, double ValueBlue, int Ranking)
+        public DrawCSV(List<String[]> List_value, string Path_Id)
         {
-            this.idElement = IdElement;
-            this.valueRed = ValueRed;
-            this.valueGreen = ValueGreen;
-            this.valueBlue = ValueBlue;
+            this.path_Id = Path_Id;
+            this.list_value = List_value;
         }
 
 
-        public int IdElement
-        { get { return idElement; } }
-
-        public double ValueRed
-        { get { return ValueRed; } }
-
-        public double ValueGreen
-        { get { return ValueRed; } }
-
-        public double ValueBlue
-        { get { return ValueRed; } }
-
-        public int Ranking
-        { get { return Ranking; } }
-
-
-
-        public void ReadCSV()
+  
+        public List<String[]> ReadCSV()
         {
             string line;
 
             // Read the file and display it line by line.
-            StreamReader file = new StreamReader(@"C:\Users\Marc\Desktop\3eme année\S6\POA\svg\ExempleTout.csv");
+            StreamReader file = new StreamReader(this.path_Id);
             List<String> list_str = new List<String>();
+
+
             while ((line = file.ReadLine()) != null)
             {
                 list_str.Add(line);
@@ -55,70 +36,78 @@ namespace POA_GRA_GASNIER_HABIB
 
             foreach (string obj in list_str)
             {
-
                 char[] delimiterChars = { ';' };
+                string[] element = obj.Split(delimiterChars);
 
-                string text = obj;
-
-                string[] words = text.Split(delimiterChars);
-
-                switch(words[0])
-                {
-                    case "Rectangle":
-                        Console.WriteLine("Rectangle");
-                        break;
-
-                    case "Cercle":
-                        Console.WriteLine("Cercle");
-                        break;
-
-                    case "Ellipse":
-                        Console.WriteLine("Ellipse");
-                        break;
-
-                    case "Polygone":
-                        Console.WriteLine("Polygone");
-                        break;
-
-                    case "Chemin":
-                        Console.WriteLine("Chemin");
-                        break;
-
-                    case "Texte":
-                        Console.WriteLine("Texte");
-                        break;
-
-                    case "Rotation":
-                        Console.WriteLine("Rotation");
-                        break;
-
-                    case "Translation":
-                        Console.WriteLine("Translation");
-                        break;
-
-                    default: Console.WriteLine("Error, failed to recognize caracter");
-                        break;
-                }
-
-          
-
+                list_value.Add(element);
             }
 
-            Console.ReadKey();
-
+            foreach (string[] ok in list_value)
+            {
+                Console.Write("Objet :");
+                for (int i = 0; i < ok.Length; i++)
+                {
+                    Console.WriteLine(ok[i]);
+                }
+            }
+            return list_value;
         }
-
-
         
-         
-      
 
-        public void StoreData()
+
+        public List<DrawCSV> Convert_ListStr()
         {
-            
+            List<DrawCSV> list_Obj = new List<DrawCSV>();
 
-            
+            foreach (string[] tab in this.list_value)
+            { 
+                for (int i = 0; i < tab.Length; i++)
+                {
+                    switch(tab[0])
+                    {
+                        case "Cercle":
+                            CircleCSV circle = new CircleCSV(tab[1], tab[2], tab[3], tab[4], tab[5],
+                                                             tab[6], tab[7], tab[8]);
+                            list_Obj.Add(circle);
+                            break;
+
+                        case "Rectangle":
+                            RectangleCSV rectangle = new RectangleCSV(tab[1], tab[2], tab[3], tab[4], tab[5],
+                                                                      tab[6], tab[7], tab[8], tab[9], tab[10], tab[11]);
+                            list_Obj.Add(rectangle);
+                            break;
+
+                        case "Ellipse":
+                            EllipseCSV ellipse = new EllipseCSV(tab[1], tab[2], tab[3], tab[4], tab[5],
+                                                                tab[6], tab[7], tab[8], tab[9], tab[10], tab[11]);
+                            list_Obj.Add(ellipse);
+                            break;
+
+                        case "Path":
+                            PathCSV path = new PathCSV(tab[1], tab[2], tab[3], tab[4], tab[5],
+                                                       tab[6], tab[7]);
+                            list_Obj.Add(path);
+                            break;
+
+                        case "Polygon":
+                            PolygonCSV polygon = new PolygonCSV(tab[1], tab[2], tab[3], tab[4], tab[5],
+                                                                tab[6], tab[7], tab[8]);
+                            list_Obj.Add(polygon);
+                            break;
+
+                        case "Text":
+                            TextCSV text = new TextCSV(tab[1], tab[2], tab[3], tab[4], tab[5],
+                                                                tab[6], tab[7], tab[8], tab[9]);
+                            list_Obj.Add(text);
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            return list_Obj;
         }
-
     }
 }
