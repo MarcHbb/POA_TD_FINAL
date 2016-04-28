@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>POA_GRA_GASNIER_HABIB.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CircleCSV.cs" />
+<<<<<<< HEAD
     <Compile Include="DrawCSV.cs" />
     <Compile Include="EllipseCSV.cs" />
     <Compile Include="PathCSV.cs" />
@@ -53,6 +57,23 @@
     <Compile Include="RectangleCSV.cs" />
     <Compile Include="DrawSVG.cs" />
     <Compile Include="TextCSV.cs" />
+=======
+    <Compile Include="CircleSVG.cs" />
+    <Compile Include="DrawCSV.cs" />
+    <Compile Include="DrawSVG.cs" />
+    <Compile Include="EllipseCSV.cs" />
+    <Compile Include="EllipseSVG.cs" />
+    <Compile Include="PathCSV.cs" />
+    <Compile Include="PathSVG.cs" />
+    <Compile Include="PolygonCSV.cs" />
+    <Compile Include="PolygonSVG.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RectangleCSV.cs" />
+    <Compile Include="RectangleSVG.cs" />
+    <Compile Include="TextCSV.cs" />
+    <Compile Include="TextSVG.cs" />
+>>>>>>> b32d3f64165cf82ff2daf57de7dfdb640c9854a5
     <Compile Include="Transformation.cs" />
   </ItemGroup>
   <ItemGroup>

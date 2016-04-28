@@ -1,6 +1,10 @@
 C:\Users\Marc\Desktop\3eme année\S6\POA\POA_GRA_GASNIER_HABIB\POA_GRA_GASNIER_HABIB\bin\Debug\POA_GRA_GASNIER_HABIB.exe.config
+<<<<<<< HEAD
 C:\Users\Marc\Desktop\3eme année\S6\POA\POA_GRA_GASNIER_HABIB\POA_GRA_GASNIER_HABIB\obj\Debug\POA_GRA_GASNIER_HABIB.csprojResolveAssemblyReference.cache
 C:\Users\Marc\Desktop\3eme année\S6\POA\POA_GRA_GASNIER_HABIB\POA_GRA_GASNIER_HABIB\bin\Debug\POA_GRA_GASNIER_HABIB.exe
 C:\Users\Marc\Desktop\3eme année\S6\POA\POA_GRA_GASNIER_HABIB\POA_GRA_GASNIER_HABIB\bin\Debug\POA_GRA_GASNIER_HABIB.pdb
 C:\Users\Marc\Desktop\3eme année\S6\POA\POA_GRA_GASNIER_HABIB\POA_GRA_GASNIER_HABIB\obj\Debug\POA_GRA_GASNIER_HABIB.exe
 C:\Users\Marc\Desktop\3eme année\S6\POA\POA_GRA_GASNIER_HABIB\POA_GRA_GASNIER_HABIB\obj\Debug\POA_GRA_GASNIER_HABIB.pdb
+=======
+C:\Users\Maxime\Documents\Visual Studio 2015\Projects\POA_TD_FINAL\POA\POA_GRA_GASNIER_HABIB\POA_GRA_GASNIER_HABIB\bin\Debug\POA_GRA_GASNIER_HABIB.exe.config
+>>>>>>> b32d3f64165cf82ff2daf57de7dfdb640c9854a5
